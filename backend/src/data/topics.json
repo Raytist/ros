@@ -5,7 +5,7 @@
     "description": "Федеральный закон о контрактной системе в сфере закупок",
     "icon": "Scale",
     "color": "#005BBB",
-    "questionCount": 45,
+    "questionCount": 39,
     "estimatedMinutes": 25
   },
   {
@@ -14,7 +14,7 @@
     "description": "Методические рекомендации и практики Росэлторг",
     "icon": "BookOpen",
     "color": "#0066CC",
-    "questionCount": 45,
+    "questionCount": 39,
     "estimatedMinutes": 20
   },
   {
