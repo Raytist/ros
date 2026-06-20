@@ -2893,5 +2893,2975 @@
       "label": "Федеральный закон от 05.04.2013 № 44-ФЗ"
     },
     "timeLimit": 240
+  },
+  {
+    "id": "fill-blanks-extra-1",
+    "type": "fill-blanks",
+    "topicId": "procurement-abc",
+    "difficulty": 1,
+    "title": "Базовые понятия",
+    "instruction": "Укажите сторону, размещающую закупку",
+    "content": {
+      "type": "fill-blanks",
+      "template": "В контрактной системе ___ размещает извещение о закупке и заключает контракт.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "заказчик",
+          "options": [
+            "заказчик",
+            "поставщик",
+            "оператор",
+            "ФАС"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fill-blanks-extra-2",
+    "type": "fill-blanks",
+    "topicId": "procurement-abc",
+    "difficulty": 1,
+    "title": "Базовые понятия",
+    "instruction": "Укажите предельную цену закупки",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Начальная (максимальная) цена контракта сокращённо называется ___.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "НМЦК",
+          "options": [
+            "НМЦК",
+            "НДС",
+            "ЕИС",
+            "КПС"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "44-ФЗ",
+      "article": "ст. 22",
+      "label": "Федеральный закон от 05.04.2013 № 44-ФЗ"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fill-blanks-extra-3",
+    "type": "fill-blanks",
+    "topicId": "procurement-abc",
+    "difficulty": 1,
+    "title": "Базовые понятия",
+    "instruction": "Укажите систему размещения сведений",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Сведения о закупках размещаются в единой информационной системе — ___.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "ЕИС",
+          "options": [
+            "ЕИС",
+            "ЕЭТП",
+            "ФАС",
+            "ГИС"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fill-blanks-extra-4",
+    "type": "fill-blanks",
+    "topicId": "procurement-abc",
+    "difficulty": 2,
+    "title": "Принципы закупок",
+    "instruction": "Укажите принцип конкуренции",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Одним из основных принципов контрактной системы является принцип ___ между участниками закупки.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "конкуренции",
+          "options": [
+            "конкуренции",
+            "монополии",
+            "секретности",
+            "дискриминации"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "step-sorting-extra-5",
+    "type": "step-sorting",
+    "topicId": "procurement-abc",
+    "difficulty": 1,
+    "title": "Этапы закупки",
+    "instruction": "Расположите базовые этапы закупочной процедуры",
+    "content": {
+      "type": "step-sorting",
+      "steps": [
+        {
+          "id": "s0",
+          "label": "Планирование закупки"
+        },
+        {
+          "id": "s1",
+          "label": "Определение поставщика"
+        },
+        {
+          "id": "s2",
+          "label": "Заключение контракта"
+        },
+        {
+          "id": "s3",
+          "label": "Исполнение и приемка контракта"
+        }
+      ],
+      "correctOrder": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "card-match-extra-6",
+    "type": "card-match",
+    "topicId": "procurement-abc",
+    "difficulty": 2,
+    "title": "Роли в закупке",
+    "instruction": "Соедините роль и её описание",
+    "content": {
+      "type": "card-match",
+      "leftColumnTitle": "Понятие / ситуация",
+      "rightColumnTitle": "Определение / последствие",
+      "leftCards": [
+        {
+          "id": "l0",
+          "label": "Заказчик"
+        },
+        {
+          "id": "l1",
+          "label": "Участник закупки"
+        },
+        {
+          "id": "l2",
+          "label": "Поставщик"
+        },
+        {
+          "id": "l3",
+          "label": "Оператор ЭТП"
+        }
+      ],
+      "rightCards": [
+        {
+          "id": "r0",
+          "label": "Организует закупку и заключает контракт"
+        },
+        {
+          "id": "r1",
+          "label": "Подаст заявку на участие"
+        },
+        {
+          "id": "r2",
+          "label": "Исполняет контракт"
+        },
+        {
+          "id": "r3",
+          "label": "Обеспечивает проведение электронной процедуры"
+        }
+      ],
+      "correctPairs": {
+        "l0": "r0",
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3"
+      }
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "text-highlight-extra-7",
+    "type": "text-highlight",
+    "topicId": "procurement-abc",
+    "difficulty": 2,
+    "title": "Принципы закупок",
+    "instruction": "Выделите формулировку о принципе открытости",
+    "content": {
+      "type": "text-highlight",
+      "text": "Контрактная система основывается на принципах открытости, прозрачности, конкуренции, профессионализма, стимулирования инноваций, единства, ответственности и эффективности.",
+      "correctText": "принципах открытости, прозрачности, конкуренции"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-8",
+    "type": "fill-blanks",
+    "topicId": "procurement-abc",
+    "difficulty": 2,
+    "title": "СМП и СОНКО",
+    "instruction": "Укажите категорию участников",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Для субъектов малого предпринимательства используется сокращение ___.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "СМП",
+          "options": [
+            "СМП",
+            "СНО",
+            "ЕИС",
+            "НКО"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "next-step-extra-9",
+    "type": "next-step",
+    "topicId": "procurement-abc",
+    "difficulty": 2,
+    "title": "Документация закупки",
+    "instruction": "Выберите следующий шаг в процедуре",
+    "content": {
+      "type": "next-step",
+      "currentStep": "Подготовлен проект извещения",
+      "completedSteps": [
+        "Сформирована потребность в закупке"
+      ],
+      "options": [
+        {
+          "id": "a",
+          "label": "Разместить извещение в ЕИС"
+        },
+        {
+          "id": "b",
+          "label": "Подписать акт приемки"
+        },
+        {
+          "id": "c",
+          "label": "Внести поставщика в РНП"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-10",
+    "type": "fill-blanks",
+    "topicId": "procurement-abc",
+    "difficulty": 3,
+    "title": "Обеспечение заявки",
+    "instruction": "Укажите вид обеспечения",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Участник может представить обеспечение заявки в виде денежных средств или ___.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "независимой гарантии",
+          "options": [
+            "независимой гарантии",
+            "аккредитива",
+            "залога",
+            "расписки"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "44-ФЗ",
+      "article": "ст. 44",
+      "label": "Федеральный закон от 05.04.2013 № 44-ФЗ"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "step-sorting-extra-11",
+    "type": "step-sorting",
+    "topicId": "procurement-abc",
+    "difficulty": 3,
+    "title": "Планирование",
+    "instruction": "Расположите этапы планирования закупки",
+    "content": {
+      "type": "step-sorting",
+      "steps": [
+        {
+          "id": "s0",
+          "label": "Определение потребности"
+        },
+        {
+          "id": "s1",
+          "label": "Формирование плана-графика"
+        },
+        {
+          "id": "s2",
+          "label": "Утверждение плана-графика"
+        },
+        {
+          "id": "s3",
+          "label": "Размещение плана-графика в ЕИС"
+        }
+      ],
+      "correctOrder": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "source": {
+      "law": "44-ФЗ",
+      "article": "ст. 16–22",
+      "label": "Федеральный закон от 05.04.2013 № 44-ФЗ"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "card-match-extra-12",
+    "type": "card-match",
+    "topicId": "procurement-abc",
+    "difficulty": 3,
+    "title": "Способы определения поставщика",
+    "instruction": "Соедините способ и его признак",
+    "content": {
+      "type": "card-match",
+      "leftColumnTitle": "Понятие / ситуация",
+      "rightColumnTitle": "Определение / последствие",
+      "leftCards": [
+        {
+          "id": "l0",
+          "label": "Конкурс"
+        },
+        {
+          "id": "l1",
+          "label": "Аукцион"
+        },
+        {
+          "id": "l2",
+          "label": "Запрос котировок"
+        },
+        {
+          "id": "l3",
+          "label": "Единственный поставщик"
+        }
+      ],
+      "rightCards": [
+        {
+          "id": "r0",
+          "label": "Оценка по критериям"
+        },
+        {
+          "id": "r1",
+          "label": "Снижение цены"
+        },
+        {
+          "id": "r2",
+          "label": "Выбор по минимальной цене"
+        },
+        {
+          "id": "r3",
+          "label": "Без конкуренции"
+        }
+      ],
+      "correctPairs": {
+        "l0": "r0",
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3"
+      }
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-13",
+    "type": "fill-blanks",
+    "topicId": "procurement-abc",
+    "difficulty": 3,
+    "title": "Контракт",
+    "instruction": "Укажите обязательный документ",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Результат приемки товара оформляется документом о ___.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "приемке",
+          "options": [
+            "приемке",
+            "оплате",
+            "гарантии",
+            "аудите"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "next-step-extra-14",
+    "type": "next-step",
+    "topicId": "eetp",
+    "difficulty": 1,
+    "title": "Работа на площадке",
+    "instruction": "Выберите следующий шаг в процедуре",
+    "content": {
+      "type": "next-step",
+      "currentStep": "Участник зарегистрирован на площадке",
+      "completedSteps": [],
+      "options": [
+        {
+          "id": "a",
+          "label": "Получить аккредитацию и ЭП"
+        },
+        {
+          "id": "b",
+          "label": "Подписать контракт в бумаге без ЕИС"
+        },
+        {
+          "id": "c",
+          "label": "Подать жалобу в суд"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-15",
+    "type": "fill-blanks",
+    "topicId": "eetp",
+    "difficulty": 1,
+    "title": "Электронная подпись",
+    "instruction": "Укажите вид подписи",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Для подписания заявки на электронной площадке используется усиленная квалифицированная ___.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "электронная подпись",
+          "options": [
+            "электронная подпись",
+            "печать",
+            "факсимиле",
+            "доверенность"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "step-sorting-extra-16",
+    "type": "step-sorting",
+    "topicId": "eetp",
+    "difficulty": 1,
+    "title": "Подача заявки",
+    "instruction": "Расположите шаги подачи заявки на аукцион",
+    "content": {
+      "type": "step-sorting",
+      "steps": [
+        {
+          "id": "s0",
+          "label": "Получение документации"
+        },
+        {
+          "id": "s1",
+          "label": "Формирование заявки"
+        },
+        {
+          "id": "s2",
+          "label": "Направление заявки оператору"
+        },
+        {
+          "id": "s3",
+          "label": "Внесение обеспечения заявки"
+        }
+      ],
+      "correctOrder": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "next-step-extra-17",
+    "type": "next-step",
+    "topicId": "eetp",
+    "difficulty": 2,
+    "title": "Электронный аукцион",
+    "instruction": "Выберите следующий шаг в процедуре",
+    "content": {
+      "type": "next-step",
+      "currentStep": "Завершено вскрытие заявок",
+      "completedSteps": [
+        "Опубликовано извещение",
+        "Получены заявки"
+      ],
+      "options": [
+        {
+          "id": "a",
+          "label": "Провести торги по снижению цены"
+        },
+        {
+          "id": "b",
+          "label": "Заключить контракт без протокола"
+        },
+        {
+          "id": "c",
+          "label": "Отменить закупку без оснований"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-18",
+    "type": "fill-blanks",
+    "topicId": "eetp",
+    "difficulty": 2,
+    "title": "Личный кабинет",
+    "instruction": "Укажите раздел площадки",
+    "content": {
+      "type": "fill-blanks",
+      "template": "В личном кабинете участник отслеживает статус закупок в разделе «Мои ___».",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "закупки",
+          "options": [
+            "закупки",
+            "жалобы",
+            "платежи",
+            "отчеты"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "step-sorting-extra-19",
+    "type": "step-sorting",
+    "topicId": "eetp",
+    "difficulty": 2,
+    "title": "Заключение контракта",
+    "instruction": "Расположите действия после победы в аукционе",
+    "content": {
+      "type": "step-sorting",
+      "steps": [
+        {
+          "id": "s0",
+          "label": "Публикация протокола"
+        },
+        {
+          "id": "s1",
+          "label": "Направление проекта контракта"
+        },
+        {
+          "id": "s2",
+          "label": "Подписание контракта участником"
+        },
+        {
+          "id": "s3",
+          "label": "Подписание контракта заказчиком"
+        }
+      ],
+      "correctOrder": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "next-step-extra-20",
+    "type": "next-step",
+    "topicId": "eetp",
+    "difficulty": 2,
+    "title": "Разъяснения документации",
+    "instruction": "Выберите следующий шаг в процедуре",
+    "content": {
+      "type": "next-step",
+      "currentStep": "Участник направил запрос на разъяснение",
+      "completedSteps": [
+        "Получена документация"
+      ],
+      "options": [
+        {
+          "id": "a",
+          "label": "Дождаться разъяснения заказчика в ЕИС"
+        },
+        {
+          "id": "b",
+          "label": "Изменить НМЦК самостоятельно"
+        },
+        {
+          "id": "c",
+          "label": "Подать заявку без подписи"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-21",
+    "type": "fill-blanks",
+    "topicId": "eetp",
+    "difficulty": 3,
+    "title": "Обеспечение",
+    "instruction": "Укажите способ перечисления",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Обеспечение заявки перечисляется на счет, указанный ___.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "заказчиком",
+          "options": [
+            "заказчиком",
+            "ФАС",
+            "банком",
+            "казначейством"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "44-ФЗ",
+      "article": "ст. 44",
+      "label": "Федеральный закон от 05.04.2013 № 44-ФЗ"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "card-match-extra-22",
+    "type": "card-match",
+    "topicId": "eetp",
+    "difficulty": 3,
+    "title": "Документы процедуры",
+    "instruction": "Соедините документ и момент размещения",
+    "content": {
+      "type": "card-match",
+      "leftColumnTitle": "Понятие / ситуация",
+      "rightColumnTitle": "Определение / последствие",
+      "leftCards": [
+        {
+          "id": "l0",
+          "label": "Извещение"
+        },
+        {
+          "id": "l1",
+          "label": "Протокол подведения итогов"
+        },
+        {
+          "id": "l2",
+          "label": "Проект контракта"
+        },
+        {
+          "id": "l3",
+          "label": "Жалоба"
+        }
+      ],
+      "rightCards": [
+        {
+          "id": "r0",
+          "label": "Начало закупки"
+        },
+        {
+          "id": "r1",
+          "label": "После определения победителя"
+        },
+        {
+          "id": "r2",
+          "label": "После победы в процедуре"
+        },
+        {
+          "id": "r3",
+          "label": "При несогласии с действиями заказчика"
+        }
+      ],
+      "correctPairs": {
+        "l0": "r0",
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3"
+      }
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "step-sorting-extra-23",
+    "type": "step-sorting",
+    "topicId": "eetp",
+    "difficulty": 3,
+    "title": "Жалоба на площадке",
+    "instruction": "Расположите шаги при техническом сбое",
+    "content": {
+      "type": "step-sorting",
+      "steps": [
+        {
+          "id": "s0",
+          "label": "Фиксация ошибки"
+        },
+        {
+          "id": "s1",
+          "label": "Обращение в поддержку оператора"
+        },
+        {
+          "id": "s2",
+          "label": "Получение ответа"
+        },
+        {
+          "id": "s3",
+          "label": "Продолжение процедуры в установленный срок"
+        }
+      ],
+      "correctOrder": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "next-step-extra-24",
+    "type": "next-step",
+    "topicId": "eetp",
+    "difficulty": 3,
+    "title": "Ценовое предложение",
+    "instruction": "Выберите следующий шаг в процедуре",
+    "content": {
+      "type": "next-step",
+      "currentStep": "Участник допущен к торгам",
+      "completedSteps": [
+        "Рассмотрены заявки"
+      ],
+      "options": [
+        {
+          "id": "a",
+          "label": "Подать ценовое предложение в ходе аукциона"
+        },
+        {
+          "id": "b",
+          "label": "Отозвать контракт после подписания"
+        },
+        {
+          "id": "c",
+          "label": "Отказаться от обеспечения без оснований"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-25",
+    "type": "fill-blanks",
+    "topicId": "eetp",
+    "difficulty": 3,
+    "title": "Оператор",
+    "instruction": "Укажите функцию оператора",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Оператор электронной площадки обеспечивает ___ электронных процедур.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "проведение",
+          "options": [
+            "проведение",
+            "финансирование",
+            "лицензирование",
+            "судебную защиту"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "text-highlight-extra-26",
+    "type": "text-highlight",
+    "topicId": "eetp",
+    "difficulty": 2,
+    "title": "Требования к заявке",
+    "instruction": "Выделите обязательное условие заявки",
+    "content": {
+      "type": "text-highlight",
+      "text": "Заявка на участие в закупке должна быть подписана усиленной квалифицированной электронной подписью лица, имеющего право действовать от имени участника.",
+      "correctText": "подписана усиленной квалифицированной электронной подписью"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "text-highlight-extra-27",
+    "type": "text-highlight",
+    "topicId": "civil-code",
+    "difficulty": 1,
+    "title": "Заключение договора",
+    "instruction": "Выделите момент заключения договора",
+    "content": {
+      "type": "text-highlight",
+      "text": "Договор признается заключенным в момент получения лицом, направившим оферту, ее акцепта.",
+      "correctText": "в момент получения лицом, направившим оферту, ее акцепта"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-28",
+    "type": "fill-blanks",
+    "topicId": "civil-code",
+    "difficulty": 1,
+    "title": "Существенные условия",
+    "instruction": "Укажите обязательное условие",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Существенным условием договора купли-продажи является предмет договора и ___ товара.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "цена",
+          "options": [
+            "цена",
+            "цвет",
+            "упаковка",
+            "реклама"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fill-blanks-extra-29",
+    "type": "fill-blanks",
+    "topicId": "civil-code",
+    "difficulty": 2,
+    "title": "Ответственность",
+    "instruction": "Укажите меру ответственности",
+    "content": {
+      "type": "fill-blanks",
+      "template": "За нарушение обязательства должник обязан уплатить кредитору ___.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "неустойку",
+          "options": [
+            "неустойку",
+            "премию",
+            "дивиденды",
+            "субсидию"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "card-match-extra-30",
+    "type": "card-match",
+    "topicId": "civil-code",
+    "difficulty": 2,
+    "title": "Виды обязательств",
+    "instruction": "Соедините понятие и пример",
+    "content": {
+      "type": "card-match",
+      "leftColumnTitle": "Понятие / ситуация",
+      "rightColumnTitle": "Определение / последствие",
+      "leftCards": [
+        {
+          "id": "l0",
+          "label": "Встречное исполнение"
+        },
+        {
+          "id": "l1",
+          "label": "Солидарная ответственность"
+        },
+        {
+          "id": "l2",
+          "label": "Неосновательное обогащение"
+        },
+        {
+          "id": "l3",
+          "label": "Поручительство"
+        }
+      ],
+      "rightCards": [
+        {
+          "id": "r0",
+          "label": "Оплата после поставки"
+        },
+        {
+          "id": "r1",
+          "label": "Несколько должников отвечают полностью"
+        },
+        {
+          "id": "r2",
+          "label": "Возврат ошибочно перечисленных средств"
+        },
+        {
+          "id": "r3",
+          "label": "Ответственность третьего лица за должника"
+        }
+      ],
+      "correctPairs": {
+        "l0": "r0",
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3"
+      }
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "text-highlight-extra-31",
+    "type": "text-highlight",
+    "topicId": "civil-code",
+    "difficulty": 2,
+    "title": "Односторонний отказ",
+    "instruction": "Выделите условие одностороннего отказа",
+    "content": {
+      "type": "text-highlight",
+      "text": "Односторонний отказ от исполнения обязательства и одностороннее изменение его условий не допускаются, за исключением случаев, предусмотренных законом или договором.",
+      "correctText": "за исключением случаев, предусмотренных законом или договором"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-32",
+    "type": "fill-blanks",
+    "topicId": "civil-code",
+    "difficulty": 2,
+    "title": "Передача риска",
+    "instruction": "Укажите момент перехода риска",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Риск случайной гибели товара переходит на покупателя с момента ___ товара.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "передачи",
+          "options": [
+            "передачи",
+            "рекламы",
+            "публикации",
+            "аудита"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "step-sorting-extra-33",
+    "type": "step-sorting",
+    "topicId": "civil-code",
+    "difficulty": 3,
+    "title": "Порядок уступки",
+    "instruction": "Расположите этапы уступки права требования",
+    "content": {
+      "type": "step-sorting",
+      "steps": [
+        {
+          "id": "s0",
+          "label": "Заключение соглашения об уступке"
+        },
+        {
+          "id": "s1",
+          "label": "Уведомление должника"
+        },
+        {
+          "id": "s2",
+          "label": "Предъявление требования новым кредитором"
+        },
+        {
+          "id": "s3",
+          "label": "Исполнение обязательства"
+        }
+      ],
+      "correctOrder": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fill-blanks-extra-34",
+    "type": "fill-blanks",
+    "topicId": "civil-code",
+    "difficulty": 3,
+    "title": "Недействительность",
+    "instruction": "Укажите вид сделки",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Сделка, совершенная под влиянием существенного заблуждения, может быть признана ___.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "оспоримой",
+          "options": [
+            "оспоримой",
+            "безусловной",
+            "вечной",
+            "налоговой"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "text-highlight-extra-35",
+    "type": "text-highlight",
+    "topicId": "civil-code",
+    "difficulty": 3,
+    "title": "Проценты за пользование",
+    "instruction": "Выделите правило о процентах",
+    "content": {
+      "type": "text-highlight",
+      "text": "За пользование чужими денежными средствами вследствие их неправомерного удержания подлежат уплате проценты на сумму этих средств.",
+      "correctText": "подлежат уплате проценты на сумму этих средств"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-36",
+    "type": "fill-blanks",
+    "topicId": "civil-code",
+    "difficulty": 3,
+    "title": "Конфиденциальность",
+    "instruction": "Укажите обязанность стороны",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Стороны обязаны обеспечивать ___ полученной конфиденциальной информации.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "конфиденциальность",
+          "options": [
+            "конфиденциальность",
+            "публикацию",
+            "продажу",
+            "рекламу"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "card-match-extra-37",
+    "type": "card-match",
+    "topicId": "civil-code",
+    "difficulty": 3,
+    "title": "Способы обеспечения",
+    "instruction": "Соедините способ и описание",
+    "content": {
+      "type": "card-match",
+      "leftColumnTitle": "Понятие / ситуация",
+      "rightColumnTitle": "Определение / последствие",
+      "leftCards": [
+        {
+          "id": "l0",
+          "label": "Залог"
+        },
+        {
+          "id": "l1",
+          "label": "Неустойка"
+        },
+        {
+          "id": "l2",
+          "label": "Поручительство"
+        },
+        {
+          "id": "l3",
+          "label": "Удержание"
+        }
+      ],
+      "rightCards": [
+        {
+          "id": "r0",
+          "label": "Обеспечение имуществом"
+        },
+        {
+          "id": "r1",
+          "label": "Денежная сумма за нарушение"
+        },
+        {
+          "id": "r2",
+          "label": "Гарантия третьего лица"
+        },
+        {
+          "id": "r3",
+          "label": "Удержание вещи до исполнения"
+        }
+      ],
+      "correctPairs": {
+        "l0": "r0",
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3"
+      }
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-38",
+    "type": "fill-blanks",
+    "topicId": "civil-code",
+    "difficulty": 2,
+    "title": "Перемена лиц",
+    "instruction": "Укажите вид договора",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Перевод долга на другого лица требует согласия ___.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "кредитора",
+          "options": [
+            "кредитора",
+            "суда",
+            "банка",
+            "оператора"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "text-highlight-extra-39",
+    "type": "text-highlight",
+    "topicId": "civil-code",
+    "difficulty": 1,
+    "title": "Добросовестность",
+    "instruction": "Выделите принцип гражданского права",
+    "content": {
+      "type": "text-highlight",
+      "text": "При установлении, осуществлении и защите гражданских прав и при исполнении гражданских обязанностей участники гражданских правоотношений должны действовать добросовестно.",
+      "correctText": "должны действовать добросовестно"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-40",
+    "type": "fill-blanks",
+    "topicId": "koap",
+    "difficulty": 1,
+    "title": "Нарушение сроков",
+    "instruction": "Укажите статью КоАП",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Нарушение сроков размещения информации о закупке влечет ответственность по статье ___ КоАП РФ.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "7.30",
+          "options": [
+            "7.30",
+            "7.32",
+            "19.7",
+            "20.25"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fill-blanks-extra-41",
+    "type": "fill-blanks",
+    "topicId": "koap",
+    "difficulty": 2,
+    "title": "Нарушение порядка",
+    "instruction": "Укажите состав правонарушения",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Включение в документацию необоснованных требований к участникам относится к нарушению ___ закупки.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "порядка",
+          "options": [
+            "порядка",
+            "налогового",
+            "таможенного",
+            "валютного"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fas-case-extra-42",
+    "type": "fas-case",
+    "topicId": "koap",
+    "difficulty": 2,
+    "title": "Кейс: размещение извещения",
+    "instruction": "Какая мера ответственности наиболее вероятна?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Заказчик разместил извещение на 2 дня позже установленного срока без уважительных причин.",
+      "question": "Какая мера ответственности наиболее вероятна?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Административный штраф по ст. 7.30 КоАП РФ"
+        },
+        {
+          "id": "b",
+          "label": "Уголовное наказание по ст. 285 УК РФ"
+        },
+        {
+          "id": "c",
+          "label": "Дисквалификация навсегда"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fas-case-extra-43",
+    "type": "fas-case",
+    "topicId": "koap",
+    "difficulty": 2,
+    "title": "Кейс: необоснованные требования",
+    "instruction": "Какой состав нарушения наиболее подходит?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "В документации заказчик потребовал опыт только у одного известного поставщика.",
+      "question": "Какой состав нарушения наиболее подходит?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Ст. 7.32 КоАП РФ"
+        },
+        {
+          "id": "b",
+          "label": "Ст. 158 УК РФ"
+        },
+        {
+          "id": "c",
+          "label": "Отсутствие нарушения"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fill-blanks-extra-44",
+    "type": "fill-blanks",
+    "topicId": "koap",
+    "difficulty": 3,
+    "title": "Должностные лица",
+    "instruction": "Укажите субъект ответственности",
+    "content": {
+      "type": "fill-blanks",
+      "template": "По ряду статей КоАП ответственность несут должностные ___ заказчика.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "лица",
+          "options": [
+            "лица",
+            "пассажиры",
+            "наблюдатели",
+            "аудиторы"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "card-match-extra-45",
+    "type": "card-match",
+    "topicId": "koap",
+    "difficulty": 2,
+    "title": "Санкции",
+    "instruction": "Соедините нарушение и последствие",
+    "content": {
+      "type": "card-match",
+      "leftColumnTitle": "Понятие / ситуация",
+      "rightColumnTitle": "Определение / последствие",
+      "leftCards": [
+        {
+          "id": "l0",
+          "label": "Нарушение сроков размещения"
+        },
+        {
+          "id": "l1",
+          "label": "Необоснованные требования"
+        },
+        {
+          "id": "l2",
+          "label": "Непредставление информации"
+        },
+        {
+          "id": "l3",
+          "label": "Повторное нарушение"
+        }
+      ],
+      "rightCards": [
+        {
+          "id": "r0",
+          "label": "Штраф по ст. 7.30"
+        },
+        {
+          "id": "r1",
+          "label": "Штраф по ст. 7.32"
+        },
+        {
+          "id": "r2",
+          "label": "Административная ответственность"
+        },
+        {
+          "id": "r3",
+          "label": "Более строгие последствия"
+        }
+      ],
+      "correctPairs": {
+        "l0": "r0",
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3"
+      }
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-46",
+    "type": "fill-blanks",
+    "topicId": "koap",
+    "difficulty": 1,
+    "title": "Сфера применения",
+    "instruction": "Укажите кодекс",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Административная ответственность за нарушения в закупках установлена ___ РФ.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "КоАП",
+          "options": [
+            "КоАП",
+            "УК",
+            "ГК",
+            "ТК"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fas-case-extra-47",
+    "type": "fas-case",
+    "topicId": "koap",
+    "difficulty": 3,
+    "title": "Кейс: неразмещение протокола",
+    "instruction": "Какой вывод верен?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Заказчик не разместил итоговый протокол в ЕИС в установленный срок.",
+      "question": "Какой вывод верен?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Возможна административная ответственность"
+        },
+        {
+          "id": "b",
+          "label": "Нарушение не влечет последствий"
+        },
+        {
+          "id": "c",
+          "label": "Применяется только уголовная ответственность"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "step-sorting-extra-48",
+    "type": "step-sorting",
+    "topicId": "koap",
+    "difficulty": 3,
+    "title": "Рассмотрение дела",
+    "instruction": "Расположите этапы привлечения к административной ответственности",
+    "content": {
+      "type": "step-sorting",
+      "steps": [
+        {
+          "id": "s0",
+          "label": "Выявление нарушения"
+        },
+        {
+          "id": "s1",
+          "label": "Составление протокола"
+        },
+        {
+          "id": "s2",
+          "label": "Рассмотрение дела"
+        },
+        {
+          "id": "s3",
+          "label": "Назначение наказания"
+        }
+      ],
+      "correctOrder": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fill-blanks-extra-49",
+    "type": "fill-blanks",
+    "topicId": "koap",
+    "difficulty": 2,
+    "title": "Контроль",
+    "instruction": "Укажите орган контроля",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Нарушения заказчика в сфере закупок может выявить уполномоченный ___ орган.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "контрольный",
+          "options": [
+            "контрольный",
+            "судебный",
+            "избирательный",
+            "медицинский"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "text-highlight-extra-50",
+    "type": "text-highlight",
+    "topicId": "koap",
+    "difficulty": 2,
+    "title": "Принцип ответственности",
+    "instruction": "Выделите условие привлечения к ответственности",
+    "content": {
+      "type": "text-highlight",
+      "text": "Лицо подлежит административной ответственности только за те административные правонарушения, в отношении которых установлена его вина.",
+      "correctText": "только за те административные правонарушения, в отношении которых установлена его вина"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-51",
+    "type": "fill-blanks",
+    "topicId": "koap",
+    "difficulty": 3,
+    "title": "Смягчение",
+    "instruction": "Укажите обстоятельство",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Самостоятельное сообщение о нарушении может быть ___ обстоятельством.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "смягчающим",
+          "options": [
+            "смягчающим",
+            "отягчающим",
+            "исключающим",
+            "незначительным"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fas-case-extra-52",
+    "type": "fas-case",
+    "topicId": "koap",
+    "difficulty": 1,
+    "title": "Кейс: отсутствие вины",
+    "instruction": "Можно ли привлечь к административной ответственности?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Доказано, что нарушение произошло вследствие непреодолимой технической ошибки ЕИС без вины заказчика.",
+      "question": "Можно ли привлечь к административной ответственности?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Нет, если вина не установлена"
+        },
+        {
+          "id": "b",
+          "label": "Да, в любом случае"
+        },
+        {
+          "id": "c",
+          "label": "Да, только уголовная ответственность"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fill-blanks-extra-53",
+    "type": "fill-blanks",
+    "topicId": "criminal-code",
+    "difficulty": 1,
+    "title": "Должностные преступления",
+    "instruction": "Укажите статью УК",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Злоупотребление должностными полномочиями в сфере закупок может квалифицироваться по статье ___ УК РФ.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "285",
+          "options": [
+            "285",
+            "158",
+            "105",
+            "228"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fill-blanks-extra-54",
+    "type": "fill-blanks",
+    "topicId": "criminal-code",
+    "difficulty": 2,
+    "title": "Мошенничество",
+    "instruction": "Укажите состав преступления",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Хищение средств при исполнении контракта путем обмана может образовывать состав ___ .",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "мошенничества",
+          "options": [
+            "мошенничества",
+            "кражи",
+            "грабежа",
+            "хулиганства"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fas-case-extra-55",
+    "type": "fas-case",
+    "topicId": "criminal-code",
+    "difficulty": 2,
+    "title": "Кейс: фиктивная поставка",
+    "instruction": "Какая квалификация наиболее вероятна?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Поставщик получил оплату, но товар не поставил и документы подделал.",
+      "question": "Какая квалификация наиболее вероятна?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Мошенничество"
+        },
+        {
+          "id": "b",
+          "label": "Административный штраф по КоАП"
+        },
+        {
+          "id": "c",
+          "label": "Только гражданско-правовой иск"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fill-blanks-extra-56",
+    "type": "fill-blanks",
+    "topicId": "criminal-code",
+    "difficulty": 3,
+    "title": "Взятка",
+    "instruction": "Укажите статью",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Получение взятки должностным лицом за благоприятное решение по закупке относится к статье ___ УК РФ.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "290",
+          "options": [
+            "290",
+            "158",
+            "213",
+            "111"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "card-match-extra-57",
+    "type": "card-match",
+    "topicId": "criminal-code",
+    "difficulty": 2,
+    "title": "Ответственность",
+    "instruction": "Соедините деяние и вид ответственности",
+    "content": {
+      "type": "card-match",
+      "leftColumnTitle": "Понятие / ситуация",
+      "rightColumnTitle": "Определение / последствие",
+      "leftCards": [
+        {
+          "id": "l0",
+          "label": "Подделка протокола для победы"
+        },
+        {
+          "id": "l1",
+          "label": "Нарушение срока публикации"
+        },
+        {
+          "id": "l2",
+          "label": "Неустойка по контракту"
+        },
+        {
+          "id": "l3",
+          "label": "Получение взятки"
+        }
+      ],
+      "rightCards": [
+        {
+          "id": "r0",
+          "label": "Уголовная ответственность"
+        },
+        {
+          "id": "r1",
+          "label": "Административная ответственность"
+        },
+        {
+          "id": "r2",
+          "label": "Гражданско-правовая ответственность"
+        }
+      ],
+      "correctPairs": {
+        "l0": "r0",
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r0"
+      }
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "text-highlight-extra-58",
+    "type": "text-highlight",
+    "topicId": "criminal-code",
+    "difficulty": 2,
+    "title": "Принцип вины",
+    "instruction": "Выделите условие уголовной ответственности",
+    "content": {
+      "type": "text-highlight",
+      "text": "Лицо подлежит уголовной ответственности только за те преступления, в совершении которых его вина установлена.",
+      "correctText": "только за те преступления, в совершении которых его вина установлена"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-59",
+    "type": "fill-blanks",
+    "topicId": "criminal-code",
+    "difficulty": 1,
+    "title": "Субъект преступления",
+    "instruction": "Укажите специальный субъект",
+    "content": {
+      "type": "fill-blanks",
+      "template": "По ст. 285 УК РФ субъектом преступления является ___ лицо.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "должностное",
+          "options": [
+            "должностное",
+            "несовершеннолетнее",
+            "иностранное",
+            "анонимное"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fas-case-extra-60",
+    "type": "fas-case",
+    "topicId": "criminal-code",
+    "difficulty": 3,
+    "title": "Кейс: посредник взятки",
+    "instruction": "Какая ответственность возможна?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Посредник передал деньги должностному лицу за победу в закупке.",
+      "question": "Какая ответственность возможна?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Уголовная ответственность за посредничество во взяточничестве"
+        },
+        {
+          "id": "b",
+          "label": "Только дисциплинарное взыскание"
+        },
+        {
+          "id": "c",
+          "label": "Никакой"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "step-sorting-extra-61",
+    "type": "step-sorting",
+    "topicId": "criminal-code",
+    "difficulty": 3,
+    "title": "Этапы уголовного дела",
+    "instruction": "Расположите этапы",
+    "content": {
+      "type": "step-sorting",
+      "steps": [
+        {
+          "id": "s0",
+          "label": "Возбуждение дела"
+        },
+        {
+          "id": "s1",
+          "label": "Предварительное расследование"
+        },
+        {
+          "id": "s2",
+          "label": "Судебное разбирательство"
+        },
+        {
+          "id": "s3",
+          "label": "Приговор"
+        }
+      ],
+      "correctOrder": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fill-blanks-extra-62",
+    "type": "fill-blanks",
+    "topicId": "criminal-code",
+    "difficulty": 2,
+    "title": "Коммерческий подкуп",
+    "instruction": "Укажите статью",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Незаконная передача денег коммерческому организатору за выигрыш тендера может подпадать под ст. ___ УК РФ.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "204",
+          "options": [
+            "204",
+            "159",
+            "285",
+            "222"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "text-highlight-extra-63",
+    "type": "text-highlight",
+    "topicId": "criminal-code",
+    "difficulty": 3,
+    "title": "Судимость",
+    "instruction": "Выделите последствие",
+    "content": {
+      "type": "text-highlight",
+      "text": "Судимость влечет за собой правовые последствия в случаях и в порядке, предусмотренных федеральными законами.",
+      "correctText": "правовые последствия"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-64",
+    "type": "fill-blanks",
+    "topicId": "criminal-code",
+    "difficulty": 3,
+    "title": "Преступная неосторожность",
+    "instruction": "Укажите вид вины",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Причинение крупного ущерба по неосторожности в иных случаях может быть ___ преступлением.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "преступлением",
+          "options": [
+            "преступлением",
+            "проступком",
+            "контрактом",
+            "штрафом"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fas-case-extra-65",
+    "type": "fas-case",
+    "topicId": "criminal-code",
+    "difficulty": 1,
+    "title": "Кейс: мелкое нарушение",
+    "instruction": "Какой вывод верен?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Заказчик опубликовал извещение на 1 день позже срока без иных нарушений.",
+      "question": "Какой вывод верен?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Скорее применяется КоАП, а не УК РФ"
+        },
+        {
+          "id": "b",
+          "label": "Обязательно уголовное дело"
+        },
+        {
+          "id": "c",
+          "label": "Ответственности нет"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fas-case-extra-66",
+    "type": "fas-case",
+    "topicId": "court-practice",
+    "difficulty": 1,
+    "title": "Оспаривание НМЦК",
+    "instruction": "Какой судебный исход наиболее вероятен?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Заказчик отклонил обоснование НМЦК участника без мотивировки.",
+      "question": "Какой судебный исход наиболее вероятен?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Возможно обязание устранить нарушение"
+        },
+        {
+          "id": "b",
+          "label": "Суд всегда отказывает участнику"
+        },
+        {
+          "id": "c",
+          "label": "Суд назначает уголовное наказание"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "text-highlight-extra-67",
+    "type": "text-highlight",
+    "topicId": "court-practice",
+    "difficulty": 2,
+    "title": "Доказывание",
+    "instruction": "Выделите ключевую мысль",
+    "content": {
+      "type": "text-highlight",
+      "text": "Суд оценивает доказательства по своему внутреннему убеждению, основанному на всестороннем, полном, объективном и непосредственном исследовании.",
+      "correctText": "по своему внутреннему убеждению"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fas-case-extra-68",
+    "type": "fas-case",
+    "topicId": "court-practice",
+    "difficulty": 2,
+    "title": "Кейс: отклонение заявки",
+    "instruction": "Как обычно действует суд?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Заявка отклонена из-за формальной ошибки, не влияющей на конкуренцию.",
+      "question": "Как обычно действует суд?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Может признать отклонение незаконным"
+        },
+        {
+          "id": "b",
+          "label": "Всегда поддерживает заказчика"
+        },
+        {
+          "id": "c",
+          "label": "Передает дело в ФАС автоматически"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fill-blanks-extra-69",
+    "type": "fill-blanks",
+    "topicId": "court-practice",
+    "difficulty": 2,
+    "title": "Подсудность",
+    "instruction": "Укажите суд",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Споры о незаконности нормативных актов в сфере закупок рассматривает ___ суд.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "арбитражный",
+          "options": [
+            "арбитражный",
+            "мировой",
+            "семейный",
+            "трудовой"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "card-match-extra-70",
+    "type": "card-match",
+    "topicId": "court-practice",
+    "difficulty": 2,
+    "title": "Истцы",
+    "instruction": "Соедините субъект и тип защиты",
+    "content": {
+      "type": "card-match",
+      "leftColumnTitle": "Понятие / ситуация",
+      "rightColumnTitle": "Определение / последствие",
+      "leftCards": [
+        {
+          "id": "l0",
+          "label": "Участник закупки"
+        },
+        {
+          "id": "l1",
+          "label": "Заказчик"
+        },
+        {
+          "id": "l2",
+          "label": "Поставщик"
+        },
+        {
+          "id": "l3",
+          "label": "Контрольный орган"
+        }
+      ],
+      "rightCards": [
+        {
+          "id": "r0",
+          "label": "Оспаривание действий заказчика"
+        },
+        {
+          "id": "r1",
+          "label": "Взыскание неустойки с поставщика"
+        },
+        {
+          "id": "r2",
+          "label": "Взыскание оплаты по контракту"
+        },
+        {
+          "id": "r3",
+          "label": "Оспаривание ненормативных актов"
+        }
+      ],
+      "correctPairs": {
+        "l0": "r0",
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3"
+      }
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fas-case-extra-71",
+    "type": "fas-case",
+    "topicId": "court-practice",
+    "difficulty": 3,
+    "title": "Кейс: односторонний отказ",
+    "instruction": "Что вероятнее?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Заказчик отказался от контракта без доказанного существенного нарушения.",
+      "question": "Что вероятнее?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Суд может восстановить права поставщика"
+        },
+        {
+          "id": "b",
+          "label": "Отказ всегда законен"
+        },
+        {
+          "id": "c",
+          "label": "Суд не рассматривает такие споры"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "44-ФЗ",
+      "article": "ч. 9 ст. 95",
+      "label": "Федеральный закон от 05.04.2013 № 44-ФЗ"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "step-sorting-extra-72",
+    "type": "step-sorting",
+    "topicId": "court-practice",
+    "difficulty": 3,
+    "title": "Судебный процесс",
+    "instruction": "Расположите стадии",
+    "content": {
+      "type": "step-sorting",
+      "steps": [
+        {
+          "id": "s0",
+          "label": "Подача иска"
+        },
+        {
+          "id": "s1",
+          "label": "Принятие иска"
+        },
+        {
+          "id": "s2",
+          "label": "Судебное заседание"
+        },
+        {
+          "id": "s3",
+          "label": "Вынесение решения"
+        }
+      ],
+      "correctOrder": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "text-highlight-extra-73",
+    "type": "text-highlight",
+    "topicId": "court-practice",
+    "difficulty": 3,
+    "title": "Обжалование",
+    "instruction": "Выделите срок",
+    "content": {
+      "type": "text-highlight",
+      "text": "Решение арбитражного суда первой инстанции может быть обжаловано в установленный процессуальным законом срок.",
+      "correctText": "в установленный процессуальным законом срок"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-74",
+    "type": "fill-blanks",
+    "topicId": "court-practice",
+    "difficulty": 1,
+    "title": "Доказательства",
+    "instruction": "Укажите вид доказательства",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Протоколы закупочной комиссии в суде могут использоваться как ___ .",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "доказательства",
+          "options": [
+            "доказательства",
+            "реклама",
+            "штраф",
+            "лицензия"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fas-case-extra-75",
+    "type": "fas-case",
+    "topicId": "court-practice",
+    "difficulty": 2,
+    "title": "Кейс: неравные требования",
+    "instruction": "Какой исход вероятен?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Документация содержала требования, ограничивающие конкуренцию.",
+      "question": "Какой исход вероятен?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Признание требований незаконными"
+        },
+        {
+          "id": "b",
+          "label": "Отказ в защите в любом случае"
+        },
+        {
+          "id": "c",
+          "label": "Уголовное преследование без суда"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fill-blanks-extra-76",
+    "type": "fill-blanks",
+    "topicId": "court-practice",
+    "difficulty": 3,
+    "title": "Исполнение решения",
+    "instruction": "Укажите документ",
+    "content": {
+      "type": "fill-blanks",
+      "template": "После вступления решения в силу выдается ___ лист.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "исполнительный",
+          "options": [
+            "исполнительный",
+            "подарочный",
+            "транспортный",
+            "страховой"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "text-highlight-extra-77",
+    "type": "text-highlight",
+    "topicId": "court-practice",
+    "difficulty": 1,
+    "title": "Состязательность",
+    "instruction": "Выделите принцип",
+    "content": {
+      "type": "text-highlight",
+      "text": "Гражданское судопроизводство осуществляется на основе состязательности и равноправия сторон.",
+      "correctText": "состязательности и равноправия сторон"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fas-case-extra-78",
+    "type": "fas-case",
+    "topicId": "fas",
+    "difficulty": 1,
+    "title": "Жалоба на документацию",
+    "instruction": "Как вероятно поступит ФАС?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "В документации указан конкретный товарный знак без слов «или эквивалент».",
+      "question": "Как вероятно поступит ФАС?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Выдаст предписание об устранении нарушения"
+        },
+        {
+          "id": "b",
+          "label": "Откажет в рассмотрении жалобы"
+        },
+        {
+          "id": "c",
+          "label": "Назначит уголовное наказание"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fas-case-extra-79",
+    "type": "fas-case",
+    "topicId": "fas",
+    "difficulty": 2,
+    "title": "Кейс: необоснованное отклонение",
+    "instruction": "Какое решение вероятно?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Заявка отклонена из-за отсутствия копии паспорта, не требуемой документацией.",
+      "question": "Какое решение вероятно?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Признание жалобы обоснованной"
+        },
+        {
+          "id": "b",
+          "label": "Отказ в удовлетворении жалобы"
+        },
+        {
+          "id": "c",
+          "label": "Передача дела в суд без рассмотрения"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "card-match-extra-80",
+    "type": "card-match",
+    "topicId": "fas",
+    "difficulty": 2,
+    "title": "Решения ФАС",
+    "instruction": "Соедините нарушение и меру",
+    "content": {
+      "type": "card-match",
+      "leftColumnTitle": "Понятие / ситуация",
+      "rightColumnTitle": "Определение / последствие",
+      "leftCards": [
+        {
+          "id": "l0",
+          "label": "Ограничение конкуренции"
+        },
+        {
+          "id": "l1",
+          "label": "Неправомерное отклонение заявки"
+        },
+        {
+          "id": "l2",
+          "label": "Нарушение сроков"
+        },
+        {
+          "id": "l3",
+          "label": "Необоснованная жалоба"
+        }
+      ],
+      "rightCards": [
+        {
+          "id": "r0",
+          "label": "Предписание изменить документацию"
+        },
+        {
+          "id": "r1",
+          "label": "Обязание рассмотреть заявку повторно"
+        },
+        {
+          "id": "r2",
+          "label": "Предписание разместить сведения"
+        },
+        {
+          "id": "r3",
+          "label": "Отказ в удовлетворении"
+        }
+      ],
+      "correctPairs": {
+        "l0": "r0",
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3"
+      }
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-81",
+    "type": "fill-blanks",
+    "topicId": "fas",
+    "difficulty": 1,
+    "title": "Срок жалобы",
+    "instruction": "Укажите орган",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Жалоба на действия заказчика подается в ___ России.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "ФАС",
+          "options": [
+            "ФАС",
+            "ЦБ",
+            "МВД",
+            "Минфин"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fas-case-extra-82",
+    "type": "fas-case",
+    "topicId": "fas",
+    "difficulty": 3,
+    "title": "Кейс: картельный сговор",
+    "instruction": "Какой вывод наиболее вероятен?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Участники подали идентичные цены и документы с одного IP-адреса.",
+      "question": "Какой вывод наиболее вероятен?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Возможны признаки ограничения конкуренции"
+        },
+        {
+          "id": "b",
+          "label": "Нарушений нет автоматически"
+        },
+        {
+          "id": "c",
+          "label": "Это всегда нормальная практика"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "step-sorting-extra-83",
+    "type": "step-sorting",
+    "topicId": "fas",
+    "difficulty": 2,
+    "title": "Рассмотрение жалобы",
+    "instruction": "Расположите этапы",
+    "content": {
+      "type": "step-sorting",
+      "steps": [
+        {
+          "id": "s0",
+          "label": "Подача жалобы"
+        },
+        {
+          "id": "s1",
+          "label": "Принятие к рассмотрению"
+        },
+        {
+          "id": "s2",
+          "label": "Запрос пояснений"
+        },
+        {
+          "id": "s3",
+          "label": "Вынесение решения"
+        }
+      ],
+      "correctOrder": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "text-highlight-extra-84",
+    "type": "text-highlight",
+    "topicId": "fas",
+    "difficulty": 2,
+    "title": "Предписание",
+    "instruction": "Выделите последствие",
+    "content": {
+      "type": "text-highlight",
+      "text": "В случае выявления нарушения антимонопольный орган выдает обязательное для исполнения предписание.",
+      "correctText": "выдает обязательное для исполнения предписание"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fill-blanks-extra-85",
+    "type": "fill-blanks",
+    "topicId": "fas",
+    "difficulty": 2,
+    "title": "РНП",
+    "instruction": "Укажите реестр",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Сведения о недобросовестных поставщиках вносятся в ___ .",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "РНП",
+          "options": [
+            "РНП",
+            "ЕИС",
+            "ФРС",
+            "ГИС"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "fas-case-extra-86",
+    "type": "fas-case",
+    "topicId": "fas",
+    "difficulty": 3,
+    "title": "Кейс: дискриминация",
+    "instruction": "Как поступит ФАС?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "К заказчику из другого региона предъявлены завышенные требования к опыту.",
+      "question": "Как поступит ФАС?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Может признать действия дискриминационными"
+        },
+        {
+          "id": "b",
+          "label": "Не рассматривает такие жалобы"
+        },
+        {
+          "id": "c",
+          "label": "Всегда поддерживает заказчика"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
+  },
+  {
+    "id": "fill-blanks-extra-87",
+    "type": "fill-blanks",
+    "topicId": "fas",
+    "difficulty": 3,
+    "title": "Повторная жалоба",
+    "instruction": "Укажите условие",
+    "content": {
+      "type": "fill-blanks",
+      "template": "Повторная жалоба на те же действия допускается при появлении новых ___ .",
+      "blanks": [
+        {
+          "id": "b1",
+          "correctAnswer": "обстоятельств",
+          "options": [
+            "обстоятельств",
+            "штрафов",
+            "праздников",
+            "реклам"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 120
+  },
+  {
+    "id": "card-match-extra-88",
+    "type": "card-match",
+    "topicId": "fas",
+    "difficulty": 3,
+    "title": "Участники",
+    "instruction": "Соедините субъект и роль",
+    "content": {
+      "type": "card-match",
+      "leftColumnTitle": "Понятие / ситуация",
+      "rightColumnTitle": "Определение / последствие",
+      "leftCards": [
+        {
+          "id": "l0",
+          "label": "Заявитель жалобы"
+        },
+        {
+          "id": "l1",
+          "label": "Заказчик"
+        },
+        {
+          "id": "l2",
+          "label": "ФАС"
+        },
+        {
+          "id": "l3",
+          "label": "Оператор ЭТП"
+        }
+      ],
+      "rightCards": [
+        {
+          "id": "r0",
+          "label": "Участник или иное заинтересованное лицо"
+        },
+        {
+          "id": "r1",
+          "label": "Представляет пояснения"
+        },
+        {
+          "id": "r2",
+          "label": "Принимает решение"
+        },
+        {
+          "id": "r3",
+          "label": "Предоставляет сведения о процедуре"
+        }
+      ],
+      "correctPairs": {
+        "l0": "r0",
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3"
+      }
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "text-highlight-extra-89",
+    "type": "text-highlight",
+    "topicId": "fas",
+    "difficulty": 1,
+    "title": "Компетенция",
+    "instruction": "Выделите полномочие",
+    "content": {
+      "type": "text-highlight",
+      "text": "Федеральная антимонопольная служба осуществляет контроль в сфере закупок в части соблюдения законодательства о контрактной системе.",
+      "correctText": "осуществляет контроль в сфере закупок"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 150
+  },
+  {
+    "id": "fas-case-extra-90",
+    "type": "fas-case",
+    "topicId": "fas",
+    "difficulty": 2,
+    "title": "Кейс: необоснованная победа",
+    "instruction": "Какое решение вероятно?",
+    "content": {
+      "type": "fas-case",
+      "scenario": "Победитель не соответствует требованиям документации, но был допущен.",
+      "question": "Какое решение вероятно?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Предписание и пересмотр результатов"
+        },
+        {
+          "id": "b",
+          "label": "Отказ в любой защите"
+        },
+        {
+          "id": "c",
+          "label": "Автоматическое заключение нового контракта"
+        }
+      ],
+      "correctOptionId": "a"
+    },
+    "source": {
+      "law": "Рабочая тетрадь",
+      "label": "Рабочая тетрадь Росэлторг"
+    },
+    "timeLimit": 180
   }
 ]

@@ -14,7 +14,7 @@
     "description": "Методические рекомендации и практики Росэлторг",
     "icon": "BookOpen",
     "color": "#0066CC",
-    "questionCount": 39,
+    "questionCount": 44,
     "estimatedMinutes": 20
   },
   {
@@ -23,7 +23,7 @@
     "description": "Базовые понятия и принципы государственных закупок",
     "icon": "GraduationCap",
     "color": "#58CC02",
-    "questionCount": 24,
+    "questionCount": 13,
     "estimatedMinutes": 15
   },
   {
@@ -32,7 +32,7 @@
     "description": "Работа с единой электронной торговой площадкой",
     "icon": "Monitor",
     "color": "#1CB0F6",
-    "questionCount": 36,
+    "questionCount": 13,
     "estimatedMinutes": 22
   },
   {
@@ -41,7 +41,7 @@
     "description": "Гражданско-правовые аспекты контрактной системы",
     "icon": "Landmark",
     "color": "#7B61FF",
-    "questionCount": 28,
+    "questionCount": 13,
     "estimatedMinutes": 18
   },
   {
@@ -50,7 +50,7 @@
     "description": "Административная ответственность в закупках",
     "icon": "Gavel",
     "color": "#FF9600",
-    "questionCount": 20,
+    "questionCount": 13,
     "estimatedMinutes": 15
   },
   {
@@ -59,7 +59,7 @@
     "description": "Уголовная ответственность при нарушениях в закупках",
     "icon": "Shield",
     "color": "#FF4B4B",
-    "questionCount": 16,
+    "questionCount": 13,
     "estimatedMinutes": 12
   },
   {
@@ -68,7 +68,7 @@
     "description": "Анализ судебных решений по спорам в закупках",
     "icon": "FileText",
     "color": "#8B5CF6",
-    "questionCount": 22,
+    "questionCount": 12,
     "estimatedMinutes": 20
   },
   {
@@ -77,7 +77,7 @@
     "description": "Решения ФАС России по жалобам участников закупок",
     "icon": "Building2",
     "color": "#0EA5E9",
-    "questionCount": 26,
+    "questionCount": 13,
     "estimatedMinutes": 18
   }
 ]
