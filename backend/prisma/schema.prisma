@@ -1,0 +1,160 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  candidate
+  recruiter
+}
+
+enum GlobalGrade {
+  intern
+  basic
+  expert
+}
+
+model User {
+  id           String   @id
+  email        String   @unique
+  passwordHash String   @map("password_hash")
+  name         String
+  role         UserRole
+  organization String?
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  profile      CandidateProfile?
+  sessions     AssessmentSession[]
+  results      AssessmentResult[]
+  achievements UserAchievement[]
+
+  @@map("users")
+}
+
+model CandidateProfile {
+  userId        String      @id @map("user_id")
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  globalGrade   GlobalGrade @default(intern) @map("global_grade")
+  skillScore    Int         @default(0) @map("skill_score")
+  rating        Float       @default(0)
+  medalCount    Int         @default(0) @map("medal_count")
+  streak        Int         @default(0)
+  analyticsJson Json        @default("{}") @map("analytics_json")
+
+  competencies TopicCompetency[]
+
+  @@map("candidate_profiles")
+}
+
+model Topic {
+  id               String @id
+  title            String
+  description      String
+  icon             String
+  color            String
+  questionCount    Int    @map("question_count")
+  estimatedMinutes Int    @map("estimated_minutes")
+  tasks            Task[]
+
+  @@map("topics")
+}
+
+model Task {
+  id          String @id
+  topicId     String @map("topic_id")
+  topic       Topic  @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  type        String
+  difficulty  Int
+  title       String
+  instruction String
+  content     Json
+  source      Json
+  timeLimit   Int?   @map("time_limit")
+  hints       Json?
+
+  @@map("tasks")
+}
+
+model TopicCompetency {
+  id      String @id @default(cuid())
+  userId  String @map("user_id")
+  profile CandidateProfile @relation(fields: [userId], references: [userId], onDelete: Cascade)
+  topicId String @map("topic_id")
+  score   Int
+  level   String
+  medal   String?
+
+  @@unique([userId, topicId])
+  @@map("topic_competencies")
+}
+
+model Achievement {
+  id          String @id
+  title       String
+  description String
+  icon        String
+  users       UserAchievement[]
+
+  @@map("achievements")
+}
+
+model UserAchievement {
+  userId        String   @map("user_id")
+  achievementId String   @map("achievement_id")
+  unlockedAt    DateTime @map("unlocked_at")
+
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@id([userId, achievementId])
+  @@map("user_achievements")
+}
+
+model AssessmentSession {
+  id           String    @id @default(cuid())
+  userId       String    @map("user_id")
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  mode         String
+  topicId      String?   @map("topic_id")
+  startedAt    DateTime  @default(now()) @map("started_at")
+  completedAt  DateTime? @map("completed_at")
+  tasks        Json
+  answers      Json      @default("[]")
+  currentIndex Int       @default(0) @map("current_index")
+  difficulty   Int       @default(2)
+  status       String    @default("in_progress")
+
+  result AssessmentResult?
+
+  @@map("assessment_sessions")
+}
+
+model AssessmentResult {
+  id              String   @id @default(cuid())
+  sessionId       String   @unique @map("session_id")
+  session         AssessmentSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  userId          String   @map("user_id")
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  mode            String
+  topicId         String?  @map("topic_id")
+  globalGrade     String?  @map("global_grade")
+  competencyLevel String?  @map("competency_level")
+  skillScore      Int      @map("skill_score")
+  accuracy        Int
+  avgResponseTime Int      @map("avg_response_time")
+  errorCount      Int      @map("error_count")
+  hintsUsed       Int      @map("hints_used")
+  confidenceLevel Int      @map("confidence_level")
+  competencyMap   Json     @map("competency_map")
+  strengths       Json
+  weaknesses      Json
+  recommendations Json
+  aiSummary       String   @map("ai_summary")
+  completedAt     DateTime @default(now()) @map("completed_at")
+
+  @@map("assessment_results")
+}
