@@ -9,7 +9,14 @@ import type {
   TopicId,
 } from "@/types";
 import { ADAPTIVE_CONFIG } from "@/lib/constants";
-import { getTasksForAssessment } from "@/data/mock/tasks";
+import {
+  adjustDifficulty,
+  appendNextTaskIfNeeded,
+  buildTaskPool,
+  isSessionComplete,
+  startAdaptiveSession,
+} from "@/lib/assessment-engine";
+import { mockTasks } from "@/data/mock/tasks";
 import { generateAiSummary } from "@/data/mock/results";
 import { mockTopics } from "@/data/mock/topics";
 import { COMPETENCY_LEVEL_LABELS, GLOBAL_GRADE_LABELS } from "@/lib/constants";
@@ -23,13 +30,6 @@ interface AssessmentState {
   useHint: () => void;
   completeSession: () => AssessmentResult | null;
   resetSession: () => void;
-}
-
-function adjustDifficulty(current: Difficulty, isCorrect: boolean): Difficulty {
-  if (isCorrect) {
-    return Math.min(current + 1, ADAPTIVE_CONFIG.maxDifficulty) as Difficulty;
-  }
-  return Math.max(current - 1, ADAPTIVE_CONFIG.minDifficulty) as Difficulty;
 }
 
 function calculateCompetencyMap(answers: TaskAnswer[], tasks: AssessmentTask[]) {
@@ -81,14 +81,8 @@ export const useAssessmentStore = create<AssessmentState>((set, get) => ({
   isLoading: false,
 
   startSession: (userId, mode, topicId) => {
-    const taskCount =
-      mode === "global"
-        ? ADAPTIVE_CONFIG.minQuestions
-        : mode === "competency"
-          ? 12
-          : 10;
-
-    const tasks = getTasksForAssessment(mode, topicId, taskCount);
+    const pool = buildTaskPool(mockTasks, mode, topicId);
+    const initialTasks = startAdaptiveSession(pool, ADAPTIVE_CONFIG.initialDifficulty);
 
     set({
       session: {
@@ -97,11 +91,11 @@ export const useAssessmentStore = create<AssessmentState>((set, get) => ({
         mode,
         topicId,
         startedAt: new Date().toISOString(),
-        tasks,
+        tasks: initialTasks,
         answers: [],
         currentIndex: 0,
         difficulty: ADAPTIVE_CONFIG.initialDifficulty as Difficulty,
-        status: "in_progress",
+        status: initialTasks.length > 0 ? "in_progress" : "abandoned",
       },
       result: null,
     });
@@ -111,23 +105,32 @@ export const useAssessmentStore = create<AssessmentState>((set, get) => ({
     const { session } = get();
     if (!session) return;
 
+    const pool = buildTaskPool(mockTasks, session.mode, session.topicId);
     const newDifficulty = adjustDifficulty(session.difficulty, answer.isCorrect);
     const newAnswers = [...session.answers, answer];
     const nextIndex = session.currentIndex + 1;
-    const maxQuestions =
-      session.mode === "global"
-        ? ADAPTIVE_CONFIG.maxQuestions
-        : session.tasks.length;
-    const isComplete = nextIndex >= maxQuestions || nextIndex >= session.tasks.length;
+
+    let tasks = [...session.tasks];
+    const nextTask = appendNextTaskIfNeeded(pool, tasks, newDifficulty);
+    const canPickMore = Boolean(nextTask);
+
+    if (nextTask && !isSessionComplete(session.mode, newAnswers.length, canPickMore)) {
+      if (!tasks[nextIndex]) {
+        tasks = [...tasks, nextTask];
+      }
+    }
+
+    const complete = isSessionComplete(session.mode, newAnswers.length, canPickMore);
 
     set({
       session: {
         ...session,
+        tasks,
         answers: newAnswers,
-        currentIndex: nextIndex,
+        currentIndex: complete ? session.currentIndex : nextIndex,
         difficulty: newDifficulty,
-        status: isComplete ? "completed" : "in_progress",
-        completedAt: isComplete ? new Date().toISOString() : undefined,
+        status: complete ? "completed" : "in_progress",
+        completedAt: complete ? new Date().toISOString() : undefined,
       },
     });
   },
@@ -140,18 +143,17 @@ export const useAssessmentStore = create<AssessmentState>((set, get) => ({
     const { session } = get();
     if (!session) return null;
 
+    const answeredTasks = session.tasks.slice(0, session.answers.length);
     const correct = session.answers.filter((a) => a.isCorrect).length;
     const total = session.answers.length;
     const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
     const avgResponseTime =
       total > 0
-        ? Math.round(
-            session.answers.reduce((s, a) => s + a.timeSpent, 0) / total
-          )
+        ? Math.round(session.answers.reduce((s, a) => s + a.timeSpent, 0) / total)
         : 0;
     const errorCount = total - correct;
     const hintsUsed = session.answers.reduce((s, a) => s + a.hintsUsed, 0);
-    const competencyMap = calculateCompetencyMap(session.answers, session.tasks);
+    const competencyMap = calculateCompetencyMap(session.answers, answeredTasks);
 
     const sorted = [...competencyMap].sort((a, b) => b.score - a.score);
     const strengths = sorted.slice(0, 3).map((c) => {

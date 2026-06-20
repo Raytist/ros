@@ -7,7 +7,8 @@ import {
   adjustDifficulty,
   buildSessionResponse,
   computeResult,
-  getTasksForAssessment,
+  createAdaptiveSessionTasks,
+  resolveNextTaskAfterAnswer,
 } from "../services/assessment.service.js";
 import {
   getCandidateProfile,
@@ -17,6 +18,7 @@ import {
   updateProfileAfterResult,
 } from "../services/profile.service.js";
 import type { TaskAnswer } from "../types.js";
+import type { AssessmentTask } from "../types.js";
 
 const startSchema = z.object({
   mode: z.enum(["global", "competency", "basic", "medium", "hard"]),
@@ -44,8 +46,7 @@ export async function protectedRoutes(app: FastifyInstance) {
 
     const userId = (request.user as { sub: string }).sub;
     const { mode, topicId } = body.data;
-    const count = mode === "global" ? ADAPTIVE.maxQuestions : mode === "competency" ? 12 : 10;
-    const tasks = getTasksForAssessment(mode, topicId, count);
+    const tasks = createAdaptiveSessionTasks(mode, topicId);
 
     const session = await prisma.assessmentSession.create({
       data: {
@@ -81,17 +82,24 @@ export async function protectedRoutes(app: FastifyInstance) {
         return reply.status(404).send({ code: "NOT_FOUND", message: "Сессия не найдена" });
       }
 
-      const tasks = session.tasks as unknown as ReturnType<typeof getTasksForAssessment>;
+      const tasks = session.tasks as unknown as AssessmentTask[];
       const answers = [...(session.answers as unknown as TaskAnswer[]), body.data.answer as TaskAnswer];
       const newDifficulty = adjustDifficulty(session.difficulty, body.data.answer.isCorrect);
-      const nextIndex = session.currentIndex + 1;
-      const maxQuestions =
-        session.mode === "global" ? ADAPTIVE.maxQuestions : tasks.length;
-      const isComplete = nextIndex >= maxQuestions || nextIndex >= tasks.length;
+
+      const { tasks: updatedTasks, isComplete } = resolveNextTaskAfterAnswer(
+        session.mode,
+        session.topicId ?? undefined,
+        tasks,
+        newDifficulty,
+        answers.length
+      );
+
+      const nextIndex = isComplete ? session.currentIndex : session.currentIndex + 1;
 
       const updated = await prisma.assessmentSession.update({
         where: { id: session.id },
         data: {
+          tasks: updatedTasks as object[],
           answers: answers as object[],
           currentIndex: nextIndex,
           difficulty: newDifficulty,
@@ -102,7 +110,7 @@ export async function protectedRoutes(app: FastifyInstance) {
 
       return {
         session: buildSessionResponse(updated),
-        nextTask: !isComplete ? tasks[nextIndex] : undefined,
+        nextTask: !isComplete ? updatedTasks[nextIndex] : undefined,
         isComplete,
       };
     }
@@ -121,7 +129,7 @@ export async function protectedRoutes(app: FastifyInstance) {
         return reply.status(404).send({ code: "NOT_FOUND", message: "Сессия не найдена" });
       }
 
-      const tasks = session.tasks as unknown as ReturnType<typeof getTasksForAssessment>;
+      const tasks = session.tasks as unknown as AssessmentTask[];
       const answers = session.answers as unknown as TaskAnswer[];
       const resultData = computeResult(session, answers, tasks);
 

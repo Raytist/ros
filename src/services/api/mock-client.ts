@@ -24,7 +24,16 @@ import {
   mockUsers,
 } from "@/data/mock/users";
 import { mockAssessmentResults } from "@/data/mock/results";
-import { getTasksForAssessment } from "@/data/mock/tasks";
+import { mockTasks } from "@/data/mock/tasks";
+import {
+  appendNextTaskIfNeeded,
+  buildTaskPool,
+  isSessionComplete,
+  startAdaptiveSession,
+  adjustDifficulty,
+} from "@/lib/assessment-engine";
+import { ADAPTIVE_CONFIG } from "@/lib/constants";
+import { useAssessmentStore } from "@/stores/assessment-store";
 
 const delay = (ms = 300) => new Promise((r) => setTimeout(r, ms));
 
@@ -57,7 +66,8 @@ export const mockApi = {
       topicId?: TopicId
     ): Promise<StartAssessmentResponse> => {
       await delay();
-      const tasks = getTasksForAssessment(mode, topicId, mode === "global" ? 18 : 10);
+      const pool = buildTaskPool(mockTasks, mode, topicId);
+      const tasks = startAdaptiveSession(pool, ADAPTIVE_CONFIG.initialDifficulty);
       return {
         session: {
           id: `session-${Date.now()}`,
@@ -68,8 +78,8 @@ export const mockApi = {
           tasks,
           answers: [],
           currentIndex: 0,
-          difficulty: 2,
-          status: "in_progress",
+          difficulty: ADAPTIVE_CONFIG.initialDifficulty,
+          status: tasks.length > 0 ? "in_progress" : "abandoned",
         },
       };
     },
@@ -79,20 +89,45 @@ export const mockApi = {
       answer: TaskAnswer
     ): Promise<SubmitAnswerResponse> => {
       await delay(200);
-      return {
-        session: {
-          id: sessionId,
-          userId: "user-1",
-          mode: "global",
-          startedAt: new Date().toISOString(),
-          tasks: getTasksForAssessment("global", undefined, 18),
-          answers: [answer],
-          currentIndex: 1,
-          difficulty: 2,
-          status: "in_progress",
-        },
-        isComplete: false,
+      const state = useAssessmentStore.getState().session;
+      const session = state?.id === sessionId ? state : null;
+      if (!session) {
+        return {
+          session: {
+            id: sessionId,
+            userId: "user-1",
+            mode: "global",
+            startedAt: new Date().toISOString(),
+            tasks: [],
+            answers: [answer],
+            currentIndex: 0,
+            difficulty: 2,
+            status: "completed",
+          },
+          isComplete: true,
+        };
+      }
+
+      const pool = buildTaskPool(mockTasks, session.mode, session.topicId);
+      const newDifficulty = adjustDifficulty(session.difficulty, answer.isCorrect);
+      const answers = [...session.answers, answer];
+      const nextTask = appendNextTaskIfNeeded(pool, session.tasks, newDifficulty);
+      const isComplete = isSessionComplete(session.mode, answers.length, Boolean(nextTask));
+      let tasks = [...session.tasks];
+      if (nextTask && !isComplete && !tasks[session.currentIndex + 1]) {
+        tasks = [...tasks, nextTask];
+      }
+
+      const updatedSession = {
+        ...session,
+        tasks,
+        answers,
+        currentIndex: isComplete ? session.currentIndex : session.currentIndex + 1,
+        difficulty: newDifficulty,
+        status: isComplete ? ("completed" as const) : ("in_progress" as const),
       };
+
+      return { session: updatedSession, isComplete };
     },
 
     complete: async (): Promise<CompleteAssessmentResponse> => {

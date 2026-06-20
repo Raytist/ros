@@ -7,7 +7,7 @@ import { useAuthStore } from "@/stores/auth-store";
 import { api } from "@/services/api/client";
 import { isApiEnabled } from "@/services/api/fetch-client";
 import type { AssessmentMode, TaskAnswer, TaskContent, TopicId } from "@/types";
-import { ADAPTIVE_CONFIG } from "@/lib/constants";
+import { getMaxQuestions } from "@/lib/assessment-engine";
 
 export function useAssessment(mode: AssessmentMode, topicId?: TopicId) {
   const user = useAuthStore((s) => s.user);
@@ -15,40 +15,37 @@ export function useAssessment(mode: AssessmentMode, topicId?: TopicId) {
   const { session, result, startSession, submitAnswer, completeSession, resetSession } =
     useAssessmentStore();
   const [taskStartTime, setTaskStartTime] = useState(Date.now());
-  const initialized = useRef(false);
   const backendSessionId = useRef<string | null>(null);
+  const sessionKey = `${mode}:${topicId ?? "all"}`;
 
   useEffect(() => {
-    if (!initialized.current && user) {
-      initialized.current = true;
+    if (!user) return;
 
-      if (isApiEnabled()) {
-        api.assessment.start(user.id, mode, topicId).then(({ session: s }) => {
-          backendSessionId.current = s.id;
-          useAssessmentStore.setState({
-            session: s,
-            result: null,
-          });
-          setTaskStartTime(Date.now());
-        });
-      } else {
-        startSession(user.id, mode, topicId);
+    resetSession();
+    backendSessionId.current = null;
+
+    if (isApiEnabled()) {
+      api.assessment.start(user.id, mode, topicId).then(({ session: s }) => {
+        backendSessionId.current = s.id;
+        useAssessmentStore.setState({ session: s, result: null });
         setTaskStartTime(Date.now());
-      }
+      });
+    } else {
+      startSession(user.id, mode, topicId);
+      setTaskStartTime(Date.now());
     }
 
     return () => {
-      initialized.current = false;
+      resetSession();
       backendSessionId.current = null;
     };
-  }, [user, mode, topicId, startSession]);
+  }, [user, sessionKey, mode, topicId, startSession, resetSession]);
 
   const currentTask = session?.tasks[session.currentIndex];
   const progress = session
-    ? Math.round((session.currentIndex / (session.tasks.length || 1)) * 100)
+    ? Math.round((session.currentIndex / getMaxQuestions(session.mode)) * 100)
     : 0;
-  const totalQuestions =
-    mode === "global" ? ADAPTIVE_CONFIG.maxQuestions : session?.tasks.length ?? 0;
+  const totalQuestions = session ? getMaxQuestions(session.mode) : getMaxQuestions(mode);
 
   const handleSubmit = useCallback(
     async (value: unknown, isCorrect: boolean, hintsUsed = 0) => {
@@ -78,11 +75,8 @@ export function useAssessment(mode: AssessmentMode, topicId?: TopicId) {
         }
       } else {
         submitAnswer(answer);
-        const nextIndex = session.currentIndex + 1;
-        const isComplete =
-          nextIndex >= totalQuestions || nextIndex >= session.tasks.length;
-
-        if (isComplete) {
+        const updated = useAssessmentStore.getState().session;
+        if (updated?.status === "completed") {
           setTimeout(() => completeSession(), 100);
         }
       }
@@ -111,6 +105,7 @@ export function useAssessment(mode: AssessmentMode, topicId?: TopicId) {
     handleSubmit,
     resetSession,
     isComplete: session?.status === "completed" || Boolean(result),
+    sessionKey,
   };
 }
 

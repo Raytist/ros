@@ -1,13 +1,13 @@
-import type { AssessmentTask, TaskAnswer, TopicId } from "../types.js";
+import type { AssessmentTask, TaskAnswer } from "../types.js";
 import tasksData from "../data/tasks.json" with { type: "json" };
-
-const ADAPTIVE = {
-  minQuestions: 15,
-  maxQuestions: 20,
-  initialDifficulty: 2,
-  minDifficulty: 1,
-  maxDifficulty: 4,
-} as const;
+import {
+  ADAPTIVE,
+  adjustDifficulty,
+  appendNextTaskIfNeeded,
+  buildTaskPool,
+  isSessionComplete,
+  startAdaptiveSession,
+} from "./assessment-engine.js";
 
 const TOPIC_LABELS: Record<string, string> = {
   "44-fz": "44-ФЗ",
@@ -34,32 +34,38 @@ const COMPETENCY_LEVEL_LABELS: Record<string, string> = {
   expert: "Эксперт",
 };
 
-export function getTasksForAssessment(mode: string, topicId?: string, count = 15): AssessmentTask[] {
-  let filtered = [...(tasksData as AssessmentTask[])];
-  if (topicId) {
-    filtered = filtered.filter((t) => t.topicId === topicId);
-  }
-  if (filtered.length < count) {
-    filtered = [...(tasksData as AssessmentTask[])];
-  }
-
-  const interactiveFirst = [...filtered].sort((a, b) => {
-    const score = (t: AssessmentTask) =>
-      (t.type === "highlight-errors" ? 3 : 0) +
-      (t.type === "step-sorting" || t.type === "missing-step" ? 2 : 0) +
-      (t.type === "fill-blanks" || t.type === "fas-case" ? 1 : 0);
-    return score(b) - score(a);
-  });
-
-  const taskCount =
-    mode === "global" ? ADAPTIVE.minQuestions : mode === "competency" ? 12 : 10;
-
-  return interactiveFirst.slice(0, count || taskCount);
+export function getTasksForAssessment(mode: string, topicId?: string): AssessmentTask[] {
+  return buildTaskPool(tasksData as AssessmentTask[], mode, topicId);
 }
 
-function adjustDifficulty(current: number, isCorrect: boolean) {
-  if (isCorrect) return Math.min(current + 1, ADAPTIVE.maxDifficulty);
-  return Math.max(current - 1, ADAPTIVE.minDifficulty);
+export function createAdaptiveSessionTasks(mode: string, topicId?: string): AssessmentTask[] {
+  const pool = buildTaskPool(tasksData as AssessmentTask[], mode, topicId);
+  return startAdaptiveSession(pool, ADAPTIVE.initialDifficulty);
+}
+
+export function resolveNextTaskAfterAnswer(
+  mode: string,
+  topicId: string | undefined,
+  sessionTasks: AssessmentTask[],
+  newDifficulty: number,
+  answerCount: number
+): { tasks: AssessmentTask[]; isComplete: boolean } {
+  const pool = buildTaskPool(tasksData as AssessmentTask[], mode, topicId);
+  const nextTask = appendNextTaskIfNeeded(pool, sessionTasks, newDifficulty);
+  const canPickMore = Boolean(nextTask);
+  const isComplete = isSessionComplete(mode, answerCount, canPickMore);
+
+  if (isComplete || !nextTask) {
+    return { tasks: sessionTasks, isComplete };
+  }
+
+  const nextIndex = sessionTasks.length;
+  const tasks =
+    sessionTasks.length > answerCount
+      ? sessionTasks
+      : [...sessionTasks, nextTask];
+
+  return { tasks, isComplete: false };
 }
 
 function calculateCompetencyMap(answers: TaskAnswer[], tasks: AssessmentTask[]) {
@@ -149,6 +155,7 @@ export function computeResult(
   answers: TaskAnswer[],
   tasks: AssessmentTask[]
 ) {
+  const answeredTasks = tasks.slice(0, answers.length);
   const correct = answers.filter((a) => a.isCorrect).length;
   const total = answers.length;
   const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
@@ -156,7 +163,7 @@ export function computeResult(
     total > 0 ? Math.round(answers.reduce((s, a) => s + a.timeSpent, 0) / total) : 0;
   const errorCount = total - correct;
   const hintsUsed = answers.reduce((s, a) => s + a.hintsUsed, 0);
-  const competencyMap = calculateCompetencyMap(answers, tasks);
+  const competencyMap = calculateCompetencyMap(answers, answeredTasks);
 
   const sorted = [...competencyMap].sort((a, b) => b.score - a.score);
   const strengths = sorted.slice(0, 3).map((c) => TOPIC_LABELS[c.topicId] ?? c.topicId);

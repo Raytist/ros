@@ -22,6 +22,7 @@ export function AssessmentPageClient({ mode, topicId, title }: AssessmentPagePro
     handleSubmit,
     result,
     isComplete,
+    sessionKey,
   } = useAssessment(mode, topicId);
 
   if (isComplete && result) {
@@ -41,10 +42,11 @@ export function AssessmentPageClient({ mode, topicId, title }: AssessmentPagePro
       <div>
         <h1 className="text-xl font-semibold">{title}</h1>
         <p className="text-sm text-[var(--muted)]">
-          Интерактивная сессия — сложность подстраивается под ваши ответы
+          Интерактивная сессия — сложность {difficulty} из 4, задания подбираются адаптивно
         </p>
       </div>
       <AssessmentRunner
+        key={`${sessionKey}-${currentIndex}-${currentTask.id}`}
         task={currentTask}
         progress={progress}
         currentIndex={currentIndex}
